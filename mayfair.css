@@ -1,0 +1,340 @@
+* { box-sizing: border-box; }
+body { background-color: #f7e8e9;
+       color: #000000;
+	   font-family: Tahoma, Arial, sans-serif; 
+	   margin: 0;  
+}
+#wrapper { background-color: #7cb9eb;
+		   background-image: linear-gradient(to bottom, #7cb9eb, #ffffff);
+		   padding: 0;
+}   
+header { background-color: #F0F0F0; 
+        background-repeat: no-repeat;
+        color: #231814;
+		height: 100px;
+        padding-left: 100px;		 
+		padding-top: 5px;
+		padding-bottom: 5px;
+}
+header a { text-decoration: none; }
+header a:link       { color: #5f113e; }
+header a:visited { color: #000000; }
+header a:hover     { color: #039665; }
+h1 { font-size: 2em; }
+h2 { color:#26047c; }
+h3, dt { color:  #A20507;
+	 }
+h4 { background-color: #7cb9eb;
+     font-size: 1.2em;
+	 padding-left: .5em;
+	 padding-bottom: 0; 
+	 text-transform: uppercase; 
+	 border-bottom: 1px solid  #221811;
+	 clear: left;  
+} 
+h5 { background-color: #7cb9eb;
+     font-size: 1.2em;
+	 padding-left: .5em;
+	 padding-bottom: 0; 
+	 text-transform: uppercase; 
+	 border-bottom: 1px solid  #221811;
+	 clear: left;  
+} 
+nav {  text-align: center;
+	  font-size: 1em;
+	  padding: 0.5em 0;
+	  text-decoration: underline;
+}
+nav ul { 
+  display: flex !important;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+}
+nav li {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+nav a { text-decoration: underline;
+		color: #0000CC; 
+		display: inline-block; 
+		padding: 5px 10px; 
+		}
+nav a:link { color: #0000CC; }
+nav a:visited { color: #0000CC; }
+nav a:hover { color: #8D021F; }
+nav a.active,  nav a.active:link,
+nav a.active:visited { background-color: #FFEE8C;
+  			color: #000000;
+  			}
+.dropdown-container {
+    display: none;
+    width: 100%;
+ }
+
+.dropdown-container a {
+  display: block;
+  width: 100%;
+  font-size: 0.9em;
+  padding: 6px 0;
+  color: #150247;
+  text-align: center;
+}
+
+.dropdown-container[style*="display: block"],
+nav ul li:hover .dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: static;
+}
+
+main { background-color: #F0F0F0;
+       display: block;
+       padding: 1em;
+       margin: 10px;
+       max-width: 98%; 
+}
+
+h2, h3, h4, p, div, ul, dl { padding-left: 1em; padding-right: 1em;}
+main ul { padding-left: 2em; }
+.details { padding-left: 10%;
+           padding-right: 10%;
+           overflow: auto;
+}
+img { padding-left: 10px;
+      padding-right: 10px; }
+footer { background-color: #9dd0f5;
+		 font-size: 1em;
+		 font-style: italic;
+		 text-align: center;
+		 padding: 1em 1em;
+		 border-top: 4px double #5f113e;
+		 display: flex;
+		 flex-direction: column;
+		 gap: 1em;
+}
+table {	margin: 1em 0;
+    	width: 100%;
+    	border-spacing: 0;
+		 border-collapse: collapse;
+		 border: 1px solid #333333;
+}
+td, th { padding: 20px;
+	border: 1px solid #acabab;
+}
+tr td:first-child,
+tr th:first-child { background-color: #cbe3f7;}
+tr td:nth-child(2) { background-color: #f3efe2;}
+
+form { display: flex;
+        flex-direction: column;
+        padding-left: 1em; width: 80%; }
+input, textarea { margin-bottom: .5em; }
+.table-container { overflow-x: auto; }
+
+#homehero { height: 300px;
+            background-image: url(mayfairsml.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#heroboard{ height: 300px;
+            background-image: url(boardsml.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+#herohoa { height: 300px;
+            background-image: url(hoasml.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#herovolunteer { height: 300px;
+            background-image: url(volunteer.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#heroamenities { height: 300px;
+            background-image: url(amenities-sml.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#herohistory { height: 300px;
+            background-image: url(history.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#herotown { height: 300px;
+            background-image: url(townsml.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+#mobile { display: inline; }
+#desktop { display: none; }
+
+table.calendar {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+   }
+
+table.calendar caption {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 15px;
+    color: #911010;
+}
+
+table.calendar th {
+    background-color: #0b1d66;
+    color: #ffffff;
+    padding: 8px 8px;
+    font-weight: bold;
+    border: 1px solid #acabab;
+}
+
+table.calendar td {
+    border: 1px solid #acabab;
+    vertical-align: top;
+    padding: 6px ;
+    height: 100px; 
+    box-sizing: border-box;
+    width: 14.28% ; 
+    background-color: #ffffff; 
+    color: #000000;
+}
+
+table.calendar td.cal-weekend {
+    background-color: #D3D3D3;
+}
+
+table.calendar td.cal-image-day {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+table.calendar td:hover {
+    background-color: #e8f4ff;
+}
+table.calendar td.cal-image-day:hover {
+    background-color: transparent;
+    filter: brightness(0.95);
+}
+.calendar-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #7cb9eb;
+    background-image: linear-gradient(to bottom, #BEDDF5, #ffffff);
+}
+
+table.calendar td.cal-july4 {
+    background-image: url('july4.jpg');
+}
+
+table.calendar td.cal-movie {
+    background-image: url('movie.jpg');
+}
+
+table.calendar td.cal-meeting {
+    background-image: url('meeting.jpg');
+}
+table.calendar td.cal-meeting2 {
+    background-image: url('landscaping.jpg');
+}
+table.calendar td.cal-meeting3 {
+    background-image: url('meeting3.jpg');
+}
+table.calendar td.cal-truck {
+    background-image: url('foodtruck.jpg');
+}
+
+@media screen and (min-width: 680px) { 
+		header { 	padding-left: 0; 
+				text-align: center; }
+		h1        { font-size: 3em; }	
+		h2 		{text-align: center;}
+		nav ul   { 	flex-direction: row;
+				justify-content: space-around; }
+		nav li    { border-bottom: none; 
+					width: auto;}
+		#wrapper { 	background-color: #7cb9eb;
+		   			background-image: linear-gradient(to bottom, #7cb9eb, #ffffff);
+					padding: 0;
+					}
+		#homehero     { background-image: url(herohome.jpg); height: 50vh; }
+		#heroboard { background-image: url(heroboard.jpg); height: 50vh;
+					}
+		#herohoa { background-image: url(herohoa.jpg); height: 50vh; 
+					}
+		#heroamenities {background-image: url(heroamenities.jpg); height: 50vh;}
+		#herovolunteer {background-image: url(herovolunt.jpg); height: 50vh;}
+		#herohistory { background-image: url(herohistory.jpg); height: 50vh;}
+		#herotown { background-image: url(herotown.jpg); }
+		#flow { display: flex;
+				flex-direction: row; 
+				overflow-x: auto; }    
+		#mobile   { display: none; }
+		#desktop { display: inline; }
+		.details { display: flex;
+				   flex-direction: row; 
+			width: 80%; }
+		h4 { margin-left: 10%; 
+		    margin-right: 10%; }
+		form {  display: grid;
+        		grid-gap: 1em;
+        		grid-template-columns: 6em 1fr; 
+				width: 40%; }
+		input[type="submit"] {
+		grid-column: 2/3;
+        	width: 9em; }
+		
+		footer { flex-direction: row;
+			justify-content: space-between;
+			text-align: left;
+			padding: 1.5em 5em;}
+			.footer-col{ flex: 1; }
+			.footer-col:last-child {
+    					text-align: right;}
+}
+
+@media (min-width: 1024px) { 
+	@supports (display: grid) {
+		   header { grid-area: header; }	
+		   nav      { grid-area: nav; }
+		   main    { grid-area: main; }		
+		   footer  { grid-area: footer; }
+		   nav { grid-area: nav;
+		   		 background-image: url(roadtree1.jpg);
+		   		 background-size: cover;
+		   		 background-position: center;
+		   		 background-repeat: no-repeat;
+		   		 padding: 1em 0; }
+		   #wrapper { display: grid;
+		              grid-template:
+				         "header header"
+						 "nav    main"
+						 "footer footer"
+						 / 200px 1fr; }		
+		nav ul { flex-direction: column; }	
+        header {  background-image: url(mayfairlogo.jpg); padding-left: 150px;
+				 }
+		footer { background-image:url(footer1.jpg);
+		}
+				}
+			}
+
+				
+				
+				
+				
