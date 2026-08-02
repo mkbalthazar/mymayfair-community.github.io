@@ -367,21 +367,21 @@ table.calendar td.cal-party {
 
 @media screen and (max-width: 679px) {
     table.calendar {
-        margin: 10px 0;
+        margin: 5x 0;
     }
     table.calendar th {
-        padding: 4px 2px;
-        font-size: 0.85em;
+        padding: 2px 1.2px;
+        font-size: 0.65em;
     }
 
     table.calendar td {
-        padding: 4px;
-        font-size: 0.75em; 
+        padding: 3px;
+        font-size: 0.6Sem; 
         height: auto; 
-        min-height: 70px;
+        min-height: 60px;
     }
     .meeting-details, .meeting-title, .meeting-location {
-        font-size: 0.9em;
+        font-size: 0.7em;
         margin: 1px auto;
     }
 }
