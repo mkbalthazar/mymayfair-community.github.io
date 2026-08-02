@@ -32,13 +32,17 @@ h4 { background-color: #7cb9eb;
 	 border-bottom: 1px solid  #221811;
 	 clear: left;  
 } 
-h5 { background-color: #7cb9eb;
-     font-size: 1.2em;
-	 padding-left: .5em;
-	 padding-bottom: 0; 
-	 text-transform: uppercase; 
-	 border-bottom: 1px solid  #221811;
-	 clear: left;  
+.special-heading { 
+   background-color: #7cb9eb;
+   color: #000000 !important; /* Forces the text to stay black instead of H3 red */
+   font-size: 1.2em;
+   padding-left: 1em;
+   padding-bottom: 0; 
+   text-transform: uppercase; 
+   border-bottom: 1px solid #221811;
+   text-align: center;
+   max-width: 90%;
+   margin-left: 20px;
 } 
 nav {  text-align: center;
 	  font-size: 1em;
@@ -49,8 +53,9 @@ nav ul {
   display: flex !important;
   list-style-type: none;
   margin: 0;
-  padding: 0; 
-}
+  padding: 0;
+  }
+
 nav li {
   padding: 0.5em 0;
   display: flex;
@@ -99,11 +104,73 @@ main { background-color: #F0F0F0;
 }
 
 h2, h3, h4, p, div, ul, dl { padding-left: 1em; padding-right: 1em;}
+
 main ul { padding-left: 2em; }
 .details { padding-left: 10%;
            padding-right: 10%;
            overflow: auto;
 }
+.amenities-container .amenity-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.content-container {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.external-link {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 12px;
+  box-shadow: 0px 2px 4px;
+}
+
+.external-link-dark-blue {
+  background-color: #34495E;
+  color: #ffffff;
+}
+
+.external-link-green {
+  background-color: #4A7C59; 
+  color: #ffffff;
+}
+
+.facebook-link {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 12px;
+  box-shadow: 0px 2px 4px;
+  background-color: #A3C2F7;
+  margin-right: 16px; 
+  }
+
+.facebook-icon {
+  width: 20px;
+  height: 20px;
+  fill: #0B2545; 
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.facebook-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;  
+  padding-left: 1em; 
+  padding-right: 1em;
+}
+
 img { padding-left: 10px;
       padding-right: 10px; }
 footer { background-color: #9dd0f5;
@@ -177,6 +244,13 @@ input, textarea { margin-bottom: .5em; }
 			background-size: cover;
 			background-position: center; 
 }
+#herocontacts { height: 100px;
+            background-image: url(contacts.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center; 
+}
+
 #mobile { display: inline; }
 #desktop { display: none; }
 
@@ -238,12 +312,31 @@ table.calendar td.cal-image-day:hover {
     background-image: linear-gradient(to bottom, #BEDDF5, #ffffff);
 }
 
+.meeting-details {
+    margin: 2px auto 6px auto;
+    font-weight: bold;
+    text-align: center;
+    color: #3D0073;
+}
+
+.meeting-title {
+    margin:2px auto 6px auto;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meeting-location {
+    margin: 0 0 0 2px;
+    text-align: center;
+}
+
 table.calendar td.cal-july4 {
     background-image: url('july4.jpg');
 }
 
 table.calendar td.cal-movie {
-    background-image: url('movie.jpg');
+    background-image: url('movie2.jpg');
 }
 
 table.calendar td.cal-meeting {
@@ -257,6 +350,9 @@ table.calendar td.cal-meeting3 {
 }
 table.calendar td.cal-truck {
     background-image: url('foodtruck.jpg');
+}
+table.calendar td.cal-party {
+    background-image: url('party.jpg');
 }
 
 @media screen and (min-width: 680px) { 
@@ -281,6 +377,7 @@ table.calendar td.cal-truck {
 		#herovolunteer {background-image: url(herovolunt.jpg); height: 50vh;}
 		#herohistory { background-image: url(herohistory.jpg); height: 50vh;}
 		#herotown { background-image: url(herotown.jpg); }
+		#herocontacts { background-image: url(herocontacts.jpg); height: 15vh; }
 		#flow { display: flex;
 				flex-direction: row; 
 				overflow-x: auto; }    
@@ -306,6 +403,10 @@ table.calendar td.cal-truck {
 			.footer-col{ flex: 1; }
 			.footer-col:last-child {
     					text-align: right;}
+}
+
+main ul li {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1024px) { 
