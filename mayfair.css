@@ -4,10 +4,14 @@ body { background-color: #f7e8e9;
 	   font-family: Tahoma, Arial, sans-serif; 
 	   margin: 0;  
 }
-#wrapper { background-color: #7cb9eb;
-		   background-image: linear-gradient(to bottom, #7cb9eb, #ffffff);
-		   padding: 0;
+
+#wrapper { 	background-color: #7cb9eb;
+		   	background-image: linear-gradient(to bottom, #7cb9eb, #ffffff);
+		   	padding: 0;
+		    max-width: 100vw;
+		    overflow-x: hidden; 
 }   
+
 header { background-color: #F0F0F0; 
         background-repeat: no-repeat;
         color: #231814;
@@ -172,7 +176,10 @@ main ul { padding-left: 2em; }
 }
 
 img { padding-left: 10px;
-      padding-right: 10px; }
+      padding-right: 10px; 
+  		max-width: 100%;
+  		height: auto; }
+
 footer { background-color: #9dd0f5;
 		 font-size: 1em;
 		 font-style: italic;
@@ -220,7 +227,7 @@ input, textarea { margin-bottom: .5em; }
 			background-size: cover;
 			background-position: center; 
 }
-#herovolunteer { height: 300px;
+#herovolunteer { height: 250px;
             background-image: url(volunteer.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -258,6 +265,7 @@ table.calendar {
     width: 100%;
     max-width: 1400px;
     margin: 20px auto;
+    table-layout: fixed;
    }
 
 table.calendar caption {
@@ -273,6 +281,7 @@ table.calendar th {
     padding: 8px 8px;
     font-weight: bold;
     border: 1px solid #acabab;
+    width: 14.28%;
 }
 
 table.calendar td {
@@ -284,6 +293,7 @@ table.calendar td {
     width: 14.28% ; 
     background-color: #ffffff; 
     color: #000000;
+    word-break: break-word; 
 }
 
 table.calendar td.cal-weekend {
@@ -355,6 +365,27 @@ table.calendar td.cal-party {
     background-image: url('party.jpg');
 }
 
+@media screen and (max-width: 679px) {
+    table.calendar {
+        margin: 10px 0;
+    }
+    table.calendar th {
+        padding: 4px 2px;
+        font-size: 0.85em;
+    }
+
+    table.calendar td {
+        padding: 4px;
+        font-size: 0.75em; 
+        height: auto; 
+        min-height: 70px;
+    }
+    .meeting-details, .meeting-title, .meeting-location {
+        font-size: 0.9em;
+        margin: 1px auto;
+    }
+}
+
 @media screen and (min-width: 680px) { 
 		header { 	padding-left: 0; 
 				text-align: center; }
@@ -373,7 +404,7 @@ table.calendar td.cal-party {
 					}
 		#herohoa { background-image: url(herohoa.jpg); height: 50vh; 
 					}
-		#heroamenities {background-image: url(heroamenities.jpg); height: 50vh;}
+		#heroamenities {background-image: url(heroamenities.jpg);height: 50vh;}
 		#herovolunteer {background-image: url(herovolunt.jpg); height: 50vh;}
 		#herohistory { background-image: url(herohistory.jpg); height: 50vh;}
 		#herotown { background-image: url(herotown.jpg); }
