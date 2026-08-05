@@ -110,15 +110,53 @@ main { background-color: #F0F0F0;
 h2, h3, h4, p, div, ul, dl { padding-left: 1em; padding-right: 1em;}
 
 main ul { padding-left: 2em; }
-.details { padding-left: 10%;
-           padding-right: 10%;
-           overflow: auto;
+
+.details { padding-left: 1em;
+           padding-right: 1em;
+           width: 100%;
+           display: flex;
+           flex-wrap: wrap;
+           gap: 24px;
+           margin-bottom: 25px;
+           align-items: flex-start;
+        }
+
+.details > a {
+    flex: 0 0 220px;
+    max-width: 220px;
+    display: block;
 }
-.amenities-container .amenity-content {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin-top: 15px;
+
+.details a.amenity-img {
+    flex: 0 0 350px;   
+    max-width: 400px;
+    display: block;
+}
+
+.details a.board-img {
+    flex: 0 0 160px;
+    max-width: 160px;
+    display: block;
+    }
+
+.details img {
+    width: 100%;   
+    height: auto;
+    display: block;
+    padding: 2px;
+    border: 1px solid #acabab;
+}
+
+.details > ul {
+    flex: 1;
+    display: block;
+    padding-left: 20px; 
+    padding-right: 0px;
+    margin: 0;
+}
+.details li {
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 .content-container {
@@ -349,21 +387,11 @@ table.calendar td.cal-movie {
     background-image: url('movie2.jpg');
 }
 
-table.calendar td.cal-meeting {
-    background-image: url('meeting.jpg');
-}
-table.calendar td.cal-meeting2 {
-    background-image: url('landscaping.jpg');
-}
-table.calendar td.cal-meeting3 {
-    background-image: url('meeting3.jpg');
-}
-table.calendar td.cal-truck {
-    background-image: url('foodtruck.jpg');
-}
-table.calendar td.cal-party {
-    background-image: url('party.jpg');
-}
+table.calendar td.cal-meeting {background-image: url('meeting.jpg');}
+table.calendar td.cal-meeting2 {background-image: url('landscaping.jpg');}
+table.calendar td.cal-meeting3 {background-image: url('meeting3.jpg');}
+table.calendar td.cal-truck {background-image: url('foodtruck.jpg');}
+table.calendar td.cal-party {background-image: url('party.jpg');}
 
 @media screen and (max-width: 679px) {
   table.calendar {
@@ -408,11 +436,43 @@ table.calendar td {
     margin-bottom: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
+
 table.calendar td:not([class*="cal-"]):empty,
   table.calendar td:not([class*="cal-"]) > *:only-child:empty {
     display: none;
   }
+
+.details {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  
+.details > a,
+.details a.amenity-img,
+.details a.board-img {
+    max-width: 100% !important;
+    text-align: center !important;
+    flex: 0 1;
+  }
+
+.details > ul {
+    width: 100% !important;
+    padding-left: 2em !important;
+  }
+
+.details a.board-img img {
+    height: 160px !important; 
+    width: 160px;
+    margin: 0 auto;  
+    object-fit: cover !important;
+    object-position: top !important; 
+    }
 }
+.sitemap-list ul { margin-left: 20px; padding-left: 10px; list-style-type: disc; }
+.sitemap-list li { margin: 8px 0; }
+.sitemap-list > ul > li { font-weight: bold; font-size: 1.1rem; margin-top: 20px; }
+.sitemap-list ul ul li { font-weight: normal; font-size: 1rem; list-style-type: circle; }
 
 @media screen and (min-width: 680px) { 
 		header { 	padding-left: 0; 
@@ -442,9 +502,10 @@ table.calendar td:not([class*="cal-"]):empty,
 				overflow-x: auto; }    
 		#mobile   { display: none; }
 		#desktop { display: inline; }
+
 		.details { display: flex;
 				   flex-direction: row; 
-			width: 80%; }
+			     width: 100%; }
 		h4 { margin-left: 10%; 
 		    margin-right: 10%; }
 		form {  display: grid;
@@ -493,4 +554,3 @@ main ul li {
 		}
 				}
 			}
-								
